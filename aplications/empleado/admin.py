@@ -80,4 +80,3 @@ class EmpleadoAdmin(admin.ModelAdmin):
     formfield_overrides= {
         models.TextField:{'Widgets': CKEditorWidget()},
     }
-
