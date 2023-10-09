@@ -7,6 +7,7 @@ from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
 from django.db import models
 from ckeditor.widgets import CKEditorWidget
+from .models import Producto
 
 # Register your models here.
 
@@ -18,11 +19,11 @@ class ProductoAdmin(admin.ModelAdmin):
     
 class ProductoAdmin(admin.ModelAdmin):
     list_display=(
-        "codigo",
+        "codigo_producto",
         "producto", 
         "Tipo_prod",
-        "descripcion",
-        "imagen",
-    )
+        "descripcion")
+    
+    
 
 admin.site.register(Producto, ProductoAdmin)

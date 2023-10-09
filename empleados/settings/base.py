@@ -36,7 +36,9 @@ INSTALLED_APPS = [
     'aplications.departamento',
     'aplications.empleado',
     'aplications.home',
-    'aplications.productos'
+    'aplications.productos',
+    'aplications.cliente',
+    'aplications.proveedor',
 ]
 
 #CKeditor config
