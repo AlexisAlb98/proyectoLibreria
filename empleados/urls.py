@@ -18,12 +18,14 @@ from django.contrib import admin
 from django.urls import path
 from aplications.home.views import IndexView, ModeloPruebaListView 
 from aplications.departamento.views import DepartametoListView
-from aplications.productos.views import ProductoListView
+from aplications.empleado.views import EmpleadoDetailView
+from aplications.articulos.views import ArticulosListView, ArticulosDetailView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/', IndexView.as_view()),
     path("lista_prueba/", ModeloPruebaListView.as_view()),
     path("Tabla_departamento/", DepartametoListView.as_view()),
-    path("Productos/", ProductoListView.as_view()),
+    path("Lista_empleado/<pk>",EmpleadoDetailView.as_view()),
+    path("Lista_Articulos/<pk>", ArticulosDetailView.as_view()),
 ]
